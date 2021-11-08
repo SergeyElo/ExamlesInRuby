@@ -20,5 +20,7 @@ begin
   kol += 1
   prc = kol_win.to_f / kol.to_f * 100.0
 end until kol > kol_attempts
+#Result
 prc > 95 ? b = 5 : prc > 75 ? b = 4 : prc > 60 ? b = 3 : b = 2
-puts "Result. Kol: #{kol - 1}. Right: #{kol_win}. Percent: #{'%.1f' % prc}. Ball: #{b}."
+puts "Result. Kol: #{kol - 1}. Right: #{kol_win - 1}. Percent: #{'%.1f' % prc}. Ball: #{b}."
+
