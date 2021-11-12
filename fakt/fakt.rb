@@ -7,7 +7,7 @@ until i > n
   p *= i
   i += 1
 end
-puts "p1=#{p}"
+puts " 1) #{n}! = #{p}"
 
 # цикл 2
 p = 1
@@ -16,7 +16,7 @@ while i <= n
   p *= i
   i += 1
 end
-puts "p2=#{p}"
+puts " 2) #{n}! = #{p}"
 
 # цикл 3
 p = 1
@@ -25,7 +25,7 @@ begin
   p *= i
   i += 1
 end until i > n
-puts "p3=#{p}"
+puts " 3) #{n}! = #{p}"
 
 # цикл 4
 p = 1
@@ -34,18 +34,27 @@ begin
   p *= i
   i += 1
 end while i <= n
-puts "p4=#{p}"
+puts " 4) #{n}! = #{p}"
 
 # способ 5
-puts "p5=#{(1..n).inject(1) {|p,i| p*i}}"
+puts " 5) #{n}! = #{(1..n).inject(1) {|p,i| p*i}}"
 
 # способ 6
 p=1
 1.upto(n) {|x| p *= x }
-puts "p6=#{p}"
+puts " 6) #{n}! = #{p}"
 
-# способ 7
-puts "p7=#{Math.gamma(n+1).to_i}"
+# 7 способ - метод (похоже на функцию)
+def F(num)
+  p = 1
+  x = 1
+  begin
+    p *= x
+    x += 1
+  end until x > num
+  p
+end
+puts " 7) #{n}! = #{F(n)}"
 
 # способ 8 рекурсия
 def fact(n)
@@ -55,11 +64,14 @@ def fact(n)
     n * fact(n-1)
   end
 end
-puts "p8=#{fact(n)}"
+puts " 8) #{n}! = #{fact(n)}"
 
 # способ 9 коллекция
 p = 1
 for x in (1..n)
   p *= x
 end
-puts "p9=#{p}"
+puts " 9) #{n}! = #{p}"
+
+# способ 10 - по определению гамма функции Г(n+1) = n!
+puts "10) #{n}! = #{Math.gamma(n+1).to_i}"
