@@ -63,7 +63,12 @@ end
 def FindAbonent(k)
   print "Find:"
   s = gets.chomp
-  f = @k.select {|key, val| key == s || val.upcase == s.upcase}
+  st = ""
+  if s.include?("*")
+    st = s.delete("*")
+  end
+  f = @k.select {|key, val| key == s || val.upcase == s.upcase ||
+    (st !="" && val.upcase.include?(st.upcase))}
   if f.size == 0
     puts "#{s} not found!"
   else
