@@ -68,7 +68,8 @@ def FindAbonent(k)
     st = s.delete("*")
   end
   f = @k.select {|key, val| key == s || val.upcase == s.upcase ||
-    (st !="" && val.upcase.include?(st.upcase))}
+    (st !="" && val.upcase.include?(st.upcase)) ||
+    (st !="" && key.upcase.include?(st.upcase))}
   if f.size == 0
     puts "#{s} not found!"
   else
@@ -83,22 +84,18 @@ begin
   puts "1-Read 2-Write 3-Print 4-Add 5-Delete 6-Find 0-Exit"
   print "Input: "
   n = gets.chomp.to_i
-  if n == 1
+  case
+  when n == 1
     ReadBook(t)
-  end
-  if n == 2
+  when n == 2
     WriteBook(t)
-  end
-  if n == 3
+  when n == 3
     PrintBook(t)
-  end
-  if n == 4
+  when n == 4
     AddAbonent(t)
-  end
-  if n == 5
+  when n == 5
     DelAbonent(t)
-  end
-  if n == 6
+  when n == 6
     FindAbonent(t)
   end
 end until n == 0
