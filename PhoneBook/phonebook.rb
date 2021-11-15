@@ -68,8 +68,7 @@ def FindAbonent(k)
     st = s.delete("*")
   end
   f = @k.select {|key, val| key == s || val.upcase == s.upcase ||
-    (st !="" && val.upcase.include?(st.upcase)) ||
-    (st !="" && key.upcase.include?(st.upcase))}
+    (st !="" && (val.upcase.include?(st.upcase)) || (key.upcase.include?(st.upcase)))}
   if f.size == 0
     puts "#{s} not found!"
   else
