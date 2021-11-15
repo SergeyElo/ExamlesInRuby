@@ -83,19 +83,13 @@ begin
   puts "1-Read 2-Write 3-Print 4-Add 5-Delete 6-Find 0-Exit"
   print "Input: "
   n = gets.chomp.to_i
-  case
-  when n == 1
-    ReadBook(t)
-  when n == 2
-    WriteBook(t)
-  when n == 3
-    PrintBook(t)
-  when n == 4
-    AddAbonent(t)
-  when n == 5
-    DelAbonent(t)
-  when n == 6
-    FindAbonent(t)
+  case n
+  when 1 then ReadBook(t)
+  when 2 then WriteBook(t)
+  when 3 then PrintBook(t)
+  when 4 then AddAbonent(t)
+  when 5 then DelAbonent(t)
+  when 6 then FindAbonent(t)
   end
 end until n == 0
 
