@@ -1,0 +1,3 @@
+system "lpr colors.rb"
+
+
