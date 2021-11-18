@@ -10,11 +10,12 @@ def cal(year, columns)
   months = (1..12).collect do |month|
     rows = [mn[month].center(20).bg_gray.black, "Пн Вт Ср Чт Пт Сб Вс".brown]
     days = []
-    r_day = date.wday - 1
-    if r_day == 1
-      r_day = 7
-    end
+    # Корректировка дня недели wday
+    # Англия: 0-Вс 1-Пн 2-Вт 3-Ср 4-Чт 5-Пт 6-Сб
+    # Россия: 0-Пн 1-Вт 2-Ср 3-Чт 4-Пт 5-Сб 6-Вс
+    date.wday == 0 ? r_day = 6 :  r_day = date.wday - 1
     r_day.times { days.push "  " }
+    # Было: date.wday.times { days.push "  " }
     while date.month == month
       days.push("%2d" % date.mday)
       date += 1
