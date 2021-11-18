@@ -14,12 +14,14 @@ def Board(p1, p2)
     end
     print sim
   end
-  puts "Pole N 1 " + " " * 20 + " Pole N 2"
+  puts "Pole N 1   " + " " * 20 + " Pole N 2"
+  puts "  ABCDEFGHIJ" + " " * 20 + "ABCDEFGHIJ"
   (0..9).each do |i|
+    print (i < 9 ? " " : "") + (i + 1).to_s
     (0..9).each do |j|
       Put(p1[i][j])
     end
-    print " " * 20
+    print " " * 18 + (i < 9 ? " " : "") + (i + 1).to_s
     (0..9).each do |j|
       Put(p2[i][j])
     end
@@ -28,8 +30,11 @@ def Board(p1, p2)
 end
 
 def TakeMove(mas, hod)
-  i = hod[0].to_i - 1
-  j = hod[1].to_i - 1
+  i = hod[1].to_i - 1
+  if hod.length == 3
+    i = hod[1..2].to_i - 1
+  end
+  j = hod[0].ord - 65
   if mas[i][j] == 1
     mas[i][j] = 5
     puts "Popal!"
@@ -41,15 +46,14 @@ def TakeMove(mas, hod)
   mas[i][j]
 end
 
-def FinishGame(n,m)
-  p = false
-  if !n.include?(1)
-    puts "2 player win!"
-    p = true
-  end
-  if !m.include?(1)
-    puts "1 player win!"
-    p = true
+def FinishGame(n, m)
+  p = true
+  (0..9).each do
+    |i|
+    if n[i].include?(1) || m[i].include?(1)
+      p = false
+      break
+    end
   end
   p
 end
@@ -87,6 +91,6 @@ begin
   if TakeMove(x, s) != 5
     num = 3 - num
   end
-end until false #FinishGame(a,b)
+end until FinishGame(a,b)
 
 
