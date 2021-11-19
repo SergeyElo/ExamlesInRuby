@@ -1,0 +1,11 @@
+hello
+ball
+sun
+assembler
+basic
+window
+close
+open
+doors
+select
+
