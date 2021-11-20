@@ -1,5 +1,5 @@
 file = File.open(Dir.pwd + "/vopr01_all.txt")
-sum_yes = 0
+sum = 0
 num = 1
 file.each do |line|
   ost = (file.lineno + 10) % 11
@@ -16,7 +16,7 @@ file.each do |line|
     otvet_user = gets.chomp.to_i
     if otvet == otvet_user
       puts "Правильно"
-      sum_yes += 1
+      sum += 1
     else
       puts "Ошибка"
     end
@@ -24,5 +24,7 @@ file.each do |line|
 
 end
 file.close
+
+puts "Результат.\nВопросов: #{num - 1}. Правильных ответов: #{sum}. Ошибок: #{num - 1 - sum}."
 
 
