@@ -32,9 +32,10 @@ for col in colors
 end
 
 puts("Вывод массива цветов 2 способ:")
-colors.each do |c|
-  puts c
-end
+colors.each { |c| puts c }
+
+print "Вывод массива цветов 3 способ: #{colors}\n"
+puts "#Ещё вывод массива в виде строки: #{colors.to_s}"
 
 # Сумма чётных элементов в массиве
 a = [23, 4, 55, 15, 61, 22, 18, 9, 3, 56, 7, 32, 57, 10]
@@ -45,3 +46,10 @@ a.each do |n|
   end
 end
 puts "sum=#{s}"
+
+
+# Отправляем массив в хэш }
+h = {}
+n = 0
+colors.each {|x| h[n += 1] = x }
+puts h
