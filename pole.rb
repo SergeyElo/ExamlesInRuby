@@ -1,6 +1,6 @@
 kol_attempts = 10
 kol_game = 1
-slova = ["SUN", "SUMMER", "WINDOW", "COMPUTER", "REMEMBER"]
+slova = ["SUN", "SUMMER", "WINDOW", "COMPUTER", "REMEMBER","MOON","GIT"]
 begin
   puts "New game N #{kol_game}"
   s = slova[rand(5)]
