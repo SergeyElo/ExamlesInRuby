@@ -1,0 +1,34 @@
+Как определить тип переменной?
+type(x)
+var x
+class x
+x.class
+type of x
+integer(x)
+x.include?
+size(x)
+x == type
+4
+Как задаётся тип переменной?
+в разделе var x: тип
+x.class
+type(x)
+x == type
+x.include
+не задаётся
+def x = type
+x.sort
+в начале программы
+6
+--------------------------
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1
+

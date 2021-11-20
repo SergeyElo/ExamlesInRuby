@@ -33,7 +33,7 @@ class Sokoban
 #######
 EOS
   puts level, "", Sokoban.new(level).solve
-  
+
 
   def push(x, y, dx, dy, board)         # modify board
     return  if board[pos(x+2*dx, y+2*dy)] != ' '
