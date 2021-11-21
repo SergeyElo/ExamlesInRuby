@@ -9,5 +9,7 @@ file.each do |line|
     end
 end
 
-pp h
+puts "Adresses from file."
+n = 1
+h.each { |key, value| print "%2i user: #{key}" %n," " * (12 - key.to_s.length) + "add: #{value}\n" }
 
