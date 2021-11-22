@@ -33,4 +33,7 @@ else
   p "Error file read___"
 end
 
+puts "Fifth:"
+puts File.exist?(file_name) ? open(file_name, &:read) : "error read file!!..."
+
 
