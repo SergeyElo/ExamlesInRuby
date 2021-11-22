@@ -5,6 +5,8 @@ puts "Only numbers 2: #{s.scan(/\d/)}"
 puts "Char not numbers 2: #{s.scan(/\D/)}"
 puts "Only letters: #{s.scan(/[A-Za-z]/)}"
 
+puts "Word length two: #{s.scan(/[\D]{3}/)}"
+
 w = "12 567 7 889 908 94 46 7 73 9878 432"
 puts "Numbers: #{w.scan(/[[:word:]]+/)}"
 
