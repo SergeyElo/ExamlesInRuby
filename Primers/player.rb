@@ -6,7 +6,7 @@
 # Путь к программе    # cmd = "which rhythmbox"
 
 cmd = "/usr/bin/./rhythmbox-client "    # запуск плеера Rhythmbox
-system cmd + "--no-present"             # не открывать окно плеера
+system cmd + "--hide" # "--no-present"             # не открывать окно плеера
 # хэш с пунктами меню управления плеером
 h = {"1" => "play", "2" => "pause", "3" => "next", "4" => "previous",
      "5" =>"volume-down", "6" =>"volume-up", "0" => "exit"}
