@@ -9,4 +9,6 @@ def to_roman_explained(number)
   rez
 end
 
+puts to_roman_explained(18)
+puts to_roman_explained(53)
 puts to_roman_explained(2021)
