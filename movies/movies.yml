@@ -9,3 +9,38 @@
   director: Neo
   year: '1979'
   id: 2
+3: !ruby/object:Movie
+  title: Stars Wars 2
+  director: Lucas
+  year: '1982'
+  id: 3
+4: !ruby/object:Movie
+  title: Stars Wars 3
+  director: Lucas
+  year: '1988'
+  id: 4
+5: !ruby/object:Movie
+  title: Stars Wars 4
+  director: Lucas
+  year: '2005'
+  id: 5
+6: !ruby/object:Movie
+  title: Stars Wars 4
+  director: Lucas
+  year: '2005'
+  id: 6
+7: !ruby/object:Movie
+  title: Cat
+  director: Dog
+  year: '2020'
+  id: 7
+8: !ruby/object:Movie
+  title: Sheep
+  director: Needles
+  year: '2009'
+  id: 8
+9: !ruby/object:Movie
+  title: Stars Wars 5
+  director: Lucas
+  year: '2011'
+  id: 9

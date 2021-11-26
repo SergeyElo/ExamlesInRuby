@@ -7,7 +7,7 @@ class MovieStore
   end
   
   def find(id)             # этот метод находит объект Movie с заданным идентификатором id
-    @store.trancaction do  # для работы с хранилищем необходим вызов transaction
+    @store.transaction do  # для работы с хранилищем необходим вызов transaction
       @store[id]           # возвращает объект Movie ассоциированный с ключом id
     end
   end
